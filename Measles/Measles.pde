@@ -13,7 +13,7 @@ float faceX, faceY, faceDiameter;
   //Population
   faceX = appWidth*1/2;
   faceY = appHeight*1/2;
-  //faceDiameter = ;
+  faceDiameter = smallerDimension;
   //
 } //End setup
 //
