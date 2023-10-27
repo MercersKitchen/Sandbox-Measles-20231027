@@ -3,6 +3,8 @@ int appWidth, appHeight;
 float faceX, faceY, faceDiameter;
 float backgroundX, backgroundY, backgroundWidth, backgroundHeight;
 float leftEyeX, leftEyeY, rightEyeX, rightEyeY, eyeDimater;
+float noseX1, noseY1, noseX2, noseY2, noseX3, noseY3;
+float mouthX1, mouthY1, mouthX2, mouthY2;
 //
 void setup() {
   size( 600, 400); //fullScreen;
@@ -20,13 +22,28 @@ void setup() {
   backgroundY = faceY - faceDiameter*1/2;
   backgroundWidth = faceDiameter;
   backgroundHeight = faceDiameter;
-  leftEyeX, leftEyeY, eyeDimater, eyeDimater
-  rightEyeX, rightEyeY, eyeDimater, eyeDimater
-  noseX1, noseY1, noseX2, noseY2, noseX3, noseY3
-  mouthX1, mouthY1, mouthX2, mouthY2
+  leftEyeX = ;
+  leftEyeY = ;
+  eyeDimater = ;
+  eyeDimater = ;
+  rightEyeX = ;
+  rightEyeY = ;
+  eyeDimater = ;
+  eyeDimater = ;
+  noseX1 = ;
+  noseY1 = ;
+  noseX2 = ;
+  noseY2 = ;
+  noseX3 = ;
+  noseY3 = ;
+  mouthX1 = ;
+  mouthY1 = ;
+  mouthX2 = ;
+  mouthY2 = ;
   //
   //DIVs
-  
+  //4 Inscribed buttons on the background square not on the circle
+  //Solve Isolceles leg length to find rect() width and height
   //
 } //End setup
 //
