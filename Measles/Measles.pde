@@ -1,8 +1,10 @@
 //Global Variables
 int appWidth, appHeight;
 float faceX, faceY, faceDiameter;
-  //
-  void setup() {
+float backgroundX, backgroundY, backgroundWidth, backgroundHeight;
+float leftEyeX, leftEyeY, rightEyeX, rightEyeY, eyeDimater;
+//
+void setup() {
   size( 600, 400); //fullScreen;
   appWidth = width; //displayWidth
   appHeight = height; //displayHeight
@@ -14,18 +16,27 @@ float faceX, faceY, faceDiameter;
   faceX = appWidth*1/2;
   faceY = appHeight*1/2;
   faceDiameter = smallerDimension;
-  backgroundX = ;
-  backgroundY = ;
-  backgroundWidth = ;
-  backgroundHeight = ;
+  backgroundX = faceX - faceDiameter*1/2;
+  backgroundY = faceY - faceDiameter*1/2;
+  backgroundWidth = faceDiameter;
+  backgroundHeight = faceDiameter;
+  leftEyeX, leftEyeY, eyeDimater, eyeDimater
+  rightEyeX, rightEyeY, eyeDimater, eyeDimater
+  noseX1, noseY1, noseX2, noseY2, noseX3, noseY3
+  mouthX1, mouthY1, mouthX2, mouthY2
   //
   //DIVs
+  
   //
 } //End setup
 //
 void draw() {
   rect( backgroundX, backgroundY, backgroundWidth, backgroundHeight ); //Circle ONLY
   ellipse( faceX, faceY, faceDiameter, faceDiameter );
+  ellipse ( leftEyeX, leftEyeY, eyeDimater, eyeDimater ); //Left Eye
+  ellipse ( rightEyeX, rightEyeY, eyeDimater, eyeDimater ); //Right Eye
+  triangle( noseX1, noseY1, noseX2, noseY2, noseX3, noseY3 ); //Nose
+  line( mouthX1, mouthY1, mouthX2, mouthY2 ); //mouth
 } //End draw
 //
 void keyPressed() {
