@@ -14,9 +14,12 @@ float faceX, faceY, faceDiameter;
   faceX = appWidth*1/2;
   faceY = appHeight*1/2;
   faceDiameter = smallerDimension;
+  backgroundX = ;
+  backgroundY = ;
+  backgroundWidth = ;
+  backgroundHeight = ;
   //
   //DIVs
-  
   //
 } //End setup
 //
