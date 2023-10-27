@@ -16,10 +16,12 @@ float faceX, faceY, faceDiameter;
   faceDiameter = smallerDimension;
   //
   //DIVs
+  
   //
 } //End setup
 //
 void draw() {
+  rect( backgroundX, backgroundY, backgroundWidth, backgroundHeight ); //Circle ONLY
   ellipse( faceX, faceY, faceDiameter, faceDiameter );
 } //End draw
 //
