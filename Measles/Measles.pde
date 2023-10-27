@@ -15,6 +15,8 @@ float faceX, faceY, faceDiameter;
   faceY = appHeight*1/2;
   faceDiameter = smallerDimension;
   //
+  //DIVs
+  //
 } //End setup
 //
 void draw() {
