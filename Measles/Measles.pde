@@ -39,8 +39,7 @@ void setup() {
   mouthY2 = mouthY1;
   //
   //DIVs
-  //ellipse( faceX, faceY, faceDiameter, faceDiameter );
-  ellipse ( leftEyeX, leftEyeY, eyeDimater, eyeDimater ); //Left Eye
+  ellipse( faceX, faceY, faceDiameter, faceDiameter );
   //4 Inscribed buttons on the background square not on the circle
   //Solve Isolceles leg length to find rect() width and height
   //2x^2 = radius^2
