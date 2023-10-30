@@ -27,18 +27,16 @@ void setup() {
   eyeDimater = smallerDimension*1/11;
   rightEyeX = backgroundX+smallerDimension*3/4;
   rightEyeY = leftEyeY;
-  /*
-  noseX1 = smallerDimension;
-  noseY1 = smallerDimension;
-  noseX2 = smallerDimension;
-  noseY2 = smallerDimension;
-  noseX3 = smallerDimension;
-  noseY3 = smallerDimension;
-  mouthX1 = smallerDimension;
-  mouthY1 = smallerDimension;
-  mouthX2 = smallerDimension;
-  mouthY2 = smallerDimension;
-  */
+  noseX1 = faceX;
+  noseY1 = rightEyeY;
+  noseX2 = leftEyeX;
+  noseY2 = faceY;
+  noseX3 = rightEyeX;
+  noseY3 = faceY;
+  mouthX1 = noseX2;
+  mouthY1 = backgroundY+smallerDimension*3/4;
+  mouthX2 = noseX3;
+  mouthY2 = mouthY1;
   //
   //DIVs
   //ellipse( faceX, faceY, faceDiameter, faceDiameter );
@@ -56,8 +54,8 @@ void draw() {
   ellipse( faceX, faceY, faceDiameter, faceDiameter );
   ellipse ( leftEyeX, leftEyeY, eyeDimater, eyeDimater ); //Left Eye
   ellipse ( rightEyeX, rightEyeY, eyeDimater, eyeDimater ); //Right Eye
-  //triangle( noseX1, noseY1, noseX2, noseY2, noseX3, noseY3 ); //Nose
-  //line( mouthX1, mouthY1, mouthX2, mouthY2 ); //mouth
+  triangle( noseX1, noseY1, noseX2, noseY2, noseX3, noseY3 ); //Nose
+  line( mouthX1, mouthY1, mouthX2, mouthY2 ); //mouth
 } //End draw
 //
 void keyPressed() {
