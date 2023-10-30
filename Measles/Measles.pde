@@ -4,7 +4,7 @@ float faceX, faceY, faceDiameter;
 float backgroundX, backgroundY, backgroundWidth, backgroundHeight;
 float leftEyeX, leftEyeY, rightEyeX, rightEyeY, eyeDimater;
 float noseX1, noseY1, noseX2, noseY2, noseX3, noseY3;
-float mouthX1, mouthY1, mouthX2, mouthY2;
+float mouthX1, mouthY1, mouthX2, mouthY2, mouthOpen, mouthReset;
 //
 void setup() {
   size( 600, 400); //fullScreen;
@@ -37,7 +37,7 @@ void setup() {
   mouthY1 = backgroundY+smallerDimension*3/4;
   mouthX2 = noseX3;
   mouthY2 = mouthY1;
-  mouthOpen = smallerDimension*1/10;
+  mouthOpen = smallerDimension*1/4;
   mouthReset = smallerDimension/smallerDimension; //1=reset
   //
   //DIVs
@@ -56,9 +56,9 @@ void draw() {
   ellipse ( leftEyeX, leftEyeY, eyeDimater, eyeDimater ); //Left Eye
   ellipse ( rightEyeX, rightEyeY, eyeDimater, eyeDimater ); //Right Eye
   triangle( noseX1, noseY1, noseX2, noseY2, noseX3, noseY3 ); //Nose
-  strokeWeight(smallerDimension*1/10);
+  strokeWeight(mouthOpen); 
   line( mouthX1, mouthY1, mouthX2, mouthY2 ); //mouth
-  strokeWeight(smallerDimension/smallerDimension); //1=reset
+  strokeWeight(mouthReset); //1=reset
 } //End draw
 //
 void keyPressed() {
