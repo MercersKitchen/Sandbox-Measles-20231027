@@ -22,28 +22,27 @@ void setup() {
   backgroundY = faceY - faceDiameter*1/2;
   backgroundWidth = faceDiameter;
   backgroundHeight = faceDiameter;
+  leftEyeX = backgroundX+smallerDimension*1/4;
+  leftEyeY = backgroundY+smallerDimension*1/4;
+  eyeDimater = smallerDimension*1/20;
   /*
-  leftEyeX = ;
-  leftEyeY = ;
-  eyeDimater = ;
-  eyeDimater = ;
-  rightEyeX = ;
-  rightEyeY = ;
-  eyeDimater = ;
-  eyeDimater = ;
-  noseX1 = ;
-  noseY1 = ;
-  noseX2 = ;
-  noseY2 = ;
-  noseX3 = ;
-  noseY3 = ;
-  mouthX1 = ;
-  mouthY1 = ;
-  mouthX2 = ;
-  mouthY2 = ;
+  rightEyeX = smallerDimension;
+  rightEyeY = smallerDimension;
+  noseX1 = smallerDimension;
+  noseY1 = smallerDimension;
+  noseX2 = smallerDimension;
+  noseY2 = smallerDimension;
+  noseX3 = smallerDimension;
+  noseY3 = smallerDimension;
+  mouthX1 = smallerDimension;
+  mouthY1 = smallerDimension;
+  mouthX2 = smallerDimension;
+  mouthY2 = smallerDimension;
   */
   //
   //DIVs
+  //ellipse( faceX, faceY, faceDiameter, faceDiameter );
+  ellipse ( leftEyeX, leftEyeY, eyeDimater, eyeDimater ); //Left Eye
   //4 Inscribed buttons on the background square not on the circle
   //Solve Isolceles leg length to find rect() width and height
   //2x^2 = radius^2
@@ -55,7 +54,7 @@ void setup() {
 void draw() {
   //rect( backgroundX, backgroundY, backgroundWidth, backgroundHeight ); //Circle ONLY
   ellipse( faceX, faceY, faceDiameter, faceDiameter );
-  //ellipse ( leftEyeX, leftEyeY, eyeDimater, eyeDimater ); //Left Eye
+  ellipse ( leftEyeX, leftEyeY, eyeDimater, eyeDimater ); //Left Eye
   //ellipse ( rightEyeX, rightEyeY, eyeDimater, eyeDimater ); //Right Eye
   //triangle( noseX1, noseY1, noseX2, noseY2, noseX3, noseY3 ); //Nose
   //line( mouthX1, mouthY1, mouthX2, mouthY2 ); //mouth
