@@ -24,10 +24,10 @@ void setup() {
   backgroundHeight = faceDiameter;
   leftEyeX = backgroundX+smallerDimension*1/4;
   leftEyeY = backgroundY+smallerDimension*1/4;
-  eyeDimater = smallerDimension*1/20;
+  eyeDimater = smallerDimension*1/11;
+  rightEyeX = backgroundX+smallerDimension*3/4;
+  rightEyeY = leftEyeY;
   /*
-  rightEyeX = smallerDimension;
-  rightEyeY = smallerDimension;
   noseX1 = smallerDimension;
   noseY1 = smallerDimension;
   noseX2 = smallerDimension;
@@ -55,7 +55,7 @@ void draw() {
   //rect( backgroundX, backgroundY, backgroundWidth, backgroundHeight ); //Circle ONLY
   ellipse( faceX, faceY, faceDiameter, faceDiameter );
   ellipse ( leftEyeX, leftEyeY, eyeDimater, eyeDimater ); //Left Eye
-  //ellipse ( rightEyeX, rightEyeY, eyeDimater, eyeDimater ); //Right Eye
+  ellipse ( rightEyeX, rightEyeY, eyeDimater, eyeDimater ); //Right Eye
   //triangle( noseX1, noseY1, noseX2, noseY2, noseX3, noseY3 ); //Nose
   //line( mouthX1, mouthY1, mouthX2, mouthY2 ); //mouth
 } //End draw
