@@ -1,5 +1,5 @@
 //Global Variables
-int appWidth, appHeight;
+int appWidth, appHeight, smallerDimension;
 float faceX, faceY, faceDiameter;
 float backgroundX, backgroundY, backgroundWidth, backgroundHeight;
 float leftEyeX, leftEyeY, rightEyeX, rightEyeY, eyeDimater;
@@ -12,8 +12,8 @@ void setup() {
   appWidth = width; //displayWidth
   appHeight = height; //displayHeight
   //Ternary Operator
-  int smallerDimension = (appWidth >= appHeight) ? appHeight : appWidth;
-  println("Smaller Dimension is", smallerDimension);
+  smallerDimension = (appWidth >= appHeight) ? appHeight : appWidth;
+  println("Smaller Dimension is", smallerDimension); //Started as local variable
   //
   //Population
   faceX = appWidth*1/2;
@@ -40,9 +40,6 @@ void setup() {
   mouthY2 = mouthY1;
   mouthOpen = smallerDimension*1/4;
   mouthReset = smallerDimension/smallerDimension; //1=reset
-  measleX = random();
-  measleY = random();
-  measleDiameter = random();
   //
   //DIVs
   ellipse( faceX, faceY, faceDiameter, faceDiameter );
@@ -55,7 +52,7 @@ void setup() {
 } //End setup
 //
 void draw() {
-  //rect( backgroundX, backgroundY, backgroundWidth, backgroundHeight ); //Circle ONLY
+  rect( backgroundX, backgroundY, backgroundWidth, backgroundHeight ); //Circle ONLY
   ellipse( faceX, faceY, faceDiameter, faceDiameter );
   ellipse ( leftEyeX, leftEyeY, eyeDimater, eyeDimater ); //Left Eye
   ellipse ( rightEyeX, rightEyeY, eyeDimater, eyeDimater ); //Right Eye
@@ -64,7 +61,12 @@ void draw() {
   line( mouthX1, mouthY1, mouthX2, mouthY2 ); //mouth
   strokeWeight(mouthReset); //1=reset
   //
+  fill();
+  measleX = random( 0, appWidth );
+  measleY = random( 0, appHeight );
+  measleDiameter = random( smallerDimension*1/100, smallerDimension*1/30 );
   ellipse( measleX, measleY, measleDiameter, measleDiameter );
+  fill(resetColour);
 } //End draw
 //
 void keyPressed() {
