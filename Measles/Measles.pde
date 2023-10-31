@@ -5,7 +5,7 @@ float backgroundX, backgroundY, backgroundWidth, backgroundHeight;
 float leftEyeX, leftEyeY, rightEyeX, rightEyeY, eyeDimater;
 float noseX1, noseY1, noseX2, noseY2, noseX3, noseY3;
 float mouthX1, mouthY1, mouthX2, mouthY2, mouthOpen, mouthReset;
-float measleX, measle, measleDiameter;
+float measleX, measleY, measleDiameter;
 //
 void setup() {
   size( 600, 400); //fullScreen;
@@ -40,9 +40,9 @@ void setup() {
   mouthY2 = mouthY1;
   mouthOpen = smallerDimension*1/4;
   mouthReset = smallerDimension/smallerDimension; //1=reset
-  measleX = ;
-  measle = ;
-  measleDiameter = ;
+  measleX = random();
+  measleY = random();
+  measleDiameter = random();
   //
   //DIVs
   ellipse( faceX, faceY, faceDiameter, faceDiameter );
@@ -64,7 +64,7 @@ void draw() {
   line( mouthX1, mouthY1, mouthX2, mouthY2 ); //mouth
   strokeWeight(mouthReset); //1=reset
   //
-  ellipse( measleX, measle, measleDiameter, measleDiameter );
+  ellipse( measleX, measleY, measleDiameter, measleDiameter );
 } //End draw
 //
 void keyPressed() {
