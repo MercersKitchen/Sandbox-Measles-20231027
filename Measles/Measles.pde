@@ -6,6 +6,7 @@ float leftEyeX, leftEyeY, rightEyeX, rightEyeY, eyeDimater;
 float noseX1, noseY1, noseX2, noseY2, noseX3, noseY3;
 float mouthX1, mouthY1, mouthX2, mouthY2, mouthOpen, mouthReset;
 float measleX, measleY, measleDiameter;
+color resetColour=#FFFFFF;
 //
 void setup() {
   size( 600, 400); //fullScreen;
@@ -61,7 +62,8 @@ void draw() {
   line( mouthX1, mouthY1, mouthX2, mouthY2 ); //mouth
   strokeWeight(mouthReset); //1=reset
   //
-  fill();
+  color measleColour = color( 255, random(0,84), random(0, 103) );
+  fill(measleColour);
   measleX = random( 0, appWidth );
   measleY = random( 0, appHeight );
   measleDiameter = random( smallerDimension*1/100, smallerDimension*1/30 );
