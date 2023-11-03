@@ -58,23 +58,29 @@ void setup() {
 } //End setup
 //
 void draw() {
-  
+
   ellipse ( leftEyeX, leftEyeY, eyeDimater, eyeDimater ); //Left Eye
   ellipse ( rightEyeX, rightEyeY, eyeDimater, eyeDimater ); //Right Eye
   triangle( noseX1, noseY1, noseX2, noseY2, noseX3, noseY3 ); //Nose
-  strokeWeight(mouthOpen); 
+  strokeWeight(mouthOpen);
   line( mouthX1, mouthY1, mouthX2, mouthY2 ); //mouth
   strokeWeight(mouthReset); //1=reset
   //
-  color measleColour = color( 255, random(0,84), random(0, 103) );
+  color measleColour = color( 255, random(0, 84), random(0, 103) );
   fill(measleColour);
   measleDiameter = random( smallerDimension*1/100, smallerDimension*1/30 );
   measleX = random( backgroundX+(measleDiameter/2), (backgroundX+backgroundWidth)-(measleDiameter/2) );
-  while ( measleX < button1X+buttonSide ) measleX = random( backgroundX+(measleDiameter/2), (backgroundX+backgroundWidth)-(measleDiameter/2) );
+  while ( measleX < button1X+buttonSide ) {
+    measleX = random( backgroundX+(measleDiameter/2), (backgroundX+backgroundWidth)-(measleDiameter/2) );
+    println(" X here");
+  }
   measleY = random( backgroundY+(measleDiameter/2), (backgroundY+backgroundHeight)-(measleDiameter/2) );
-  while ( measleY < button1Y+buttonSide ) measleY = random( backgroundY+(measleDiameter/2), (backgroundY+backgroundHeight)-(measleDiameter/2) );
+  while ( measleY < button1Y+buttonSide ) {
+    measleY = random( backgroundY+(measleDiameter/2), (backgroundY+backgroundHeight)-(measleDiameter/2) );
+    println(" Y here");
+  }
   //button1X, button1Y, buttonSide,
-  
+  println(measleX, measleY, measleDiameter);
   noStroke();
   ellipse( measleX, measleY, measleDiameter, measleDiameter );
   stroke(1); //default is 1
