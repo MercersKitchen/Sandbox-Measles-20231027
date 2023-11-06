@@ -6,7 +6,7 @@ float leftEyeX, leftEyeY, rightEyeX, rightEyeY, eyeDimater;
 float noseX1, noseY1, noseX2, noseY2, noseX3, noseY3;
 float mouthX1, mouthY1, mouthX2, mouthY2, mouthOpen, mouthReset;
 float measleX, measleY, measleDiameter;
-float button1X, button1Y, buttonSide;
+float button1X, button1Y, button2X, button2Y, buttonSide;
 color resetColour=#FFFFFF;
 //
 void setup() {
@@ -51,8 +51,14 @@ void setup() {
   //2x^2 = radius^2
   button1X = backgroundX;
   button1Y = backgroundY;
+  button2X = backgroundX+faceDiameter-buttonSide;
+  button2Y = button1Y;
+  //button2X = ;
+  //button2Y = ;
   buttonSide = smallerDimension/2-sqrt(sq(smallerDimension/2)/2);
   rect( button1X, button1Y, buttonSide, buttonSide );
+  rect( button2X, button2Y, buttonSide, buttonSide );
+  //rect( button3X, button3Y, buttonSide, buttonSide );
   println(backgroundX, smallerDimension, smallerDimension/2, sq( smallerDimension/2 ), sq( smallerDimension/2 ) /2, sqrt( sq( smallerDimension/2 ) /2 ), smallerDimension/2-sqrt(sq(smallerDimension/2)/2) );
   //
 } //End setup
