@@ -68,15 +68,21 @@ void setup() {
 //
 void draw() {
   //Text Code
-  if (  ) { //Buton 1
+  color hoverOverColour=resetColour;
+  if ( mouseX>button1X && mouseX<button1X+buttonSide && mouseY>button1Y && mouseY<button1Y+buttonSide ) { //Buton 1
     hoverOverColour = yellow;
-  } else if (  ) { //Button 2
+  } else if ( mouseX>button2X && mouseX<button2X+buttonSide && mouseY>button2Y && mouseY<button2Y+buttonSide ) { //Button 2
     hoverOverColour = yellow;
-  } else if (  ) { //button 3
+  } else if ( mouseX>button3X && mouseX<button3X+buttonSide && mouseY>button3Y && mouseY<button3Y+buttonSide ) { //button 3
     hoverOverColour = purple;
   } else { //No Buttons
     fill( resetColour );
   }
+  rect( button1X, button1Y, buttonSide, buttonSide );
+  rect( button2X, button2Y, buttonSide, buttonSide );
+  rect( button3X, button3Y, buttonSide, buttonSide );
+  fill( resetColour );
+  //
   fill(blackInk);
   textAlign(CENTER, CENTER); //Align X&Y, see Processing.org / Reference
   //Values: [ LEFT | CENTER | RIGHT ] & [ TOP | CENTER | BOTTOM | BASELINE ]
