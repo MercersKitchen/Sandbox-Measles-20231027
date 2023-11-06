@@ -7,8 +7,9 @@ float noseX1, noseY1, noseX2, noseY2, noseX3, noseY3;
 float mouthX1, mouthY1, mouthX2, mouthY2, mouthOpen, mouthReset;
 float measleX, measleY, measleDiameter;
 float button1X, button1Y, button2X, button2Y, button3X, button3Y, buttonSide;
-color resetColour=#FFFFFF;
+color purple=#2C08FF, yellow = #E9FF00, blackInk=#000000, resetColour=#FFFFFF;
 String start="Start", stop="STOP", quit="X";
+PFont buttonFont;
 //
 void setup() {
   size( 600, 400 ); //fullScreen;
@@ -43,6 +44,7 @@ void setup() {
   mouthY2 = mouthY1;
   mouthOpen = smallerDimension*1/4;
   mouthReset = smallerDimension/smallerDimension; //1=reset
+  buttonFont = createFont("Harrington", 55);
   //
   //DIVs
   rect( backgroundX, backgroundY, backgroundWidth, backgroundHeight ); //Circle ONLY
@@ -60,13 +62,17 @@ void setup() {
   rect( button1X, button1Y, buttonSide, buttonSide );
   rect( button2X, button2Y, buttonSide, buttonSide );
   rect( button3X, button3Y, buttonSide, buttonSide );
-  println(backgroundX, smallerDimension, smallerDimension/2, sq( smallerDimension/2 ), sq( smallerDimension/2 ) /2, sqrt( sq( smallerDimension/2 ) /2 ), smallerDimension/2-sqrt(sq(smallerDimension/2)/2) );
+  
   //
 } //End setup
 //
 void draw() {
   //Text Code
-  //start="Start", stop="STOP", quit="X"
+  fill(blackInk);
+  textAlign(CENTER, CENTER); //Align X&Y, see Processing.org / Reference
+  //Values: [ LEFT | CENTER | RIGHT ] & [ TOP | CENTER | BOTTOM | BASELINE ]
+  int size = 10;
+  textFont(buttonFont, size);
   text( start, button1X, button1Y, buttonSide, buttonSide);
   text( stop, button2X, button2Y, buttonSide, buttonSide);
   text( quit, button3X, button3Y, buttonSide, buttonSide);
