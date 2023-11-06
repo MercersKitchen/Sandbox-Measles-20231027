@@ -62,16 +62,25 @@ void setup() {
   rect( button1X, button1Y, buttonSide, buttonSide );
   rect( button2X, button2Y, buttonSide, buttonSide );
   rect( button3X, button3Y, buttonSide, buttonSide );
-  
+
   //
 } //End setup
 //
 void draw() {
   //Text Code
+  if (  ) { //Buton 1
+    hoverOverColour = yellow;
+  } else if (  ) { //Button 2
+    hoverOverColour = yellow;
+  } else if (  ) { //button 3
+    hoverOverColour = purple;
+  } else { //No Buttons
+    fill( resetColour );
+  }
   fill(blackInk);
   textAlign(CENTER, CENTER); //Align X&Y, see Processing.org / Reference
   //Values: [ LEFT | CENTER | RIGHT ] & [ TOP | CENTER | BOTTOM | BASELINE ]
-  int size = 10;
+  int size = 21;
   textFont(buttonFont, size);
   text( start, button1X, button1Y, buttonSide, buttonSide);
   text( stop, button2X, button2Y, buttonSide, buttonSide);
@@ -96,10 +105,10 @@ void draw() {
   }
   /*
   if ( measleY < button1Y+buttonSide+(measleDiameter/2) ) {
-    println("\t\tYhere", measleY, button1Y+buttonSide);
-    measleY = random( button1Y+buttonSide+(measleDiameter/2), (backgroundY+backgroundHeight)-(measleDiameter/2) );
-  }
-  */
+   println("\t\tYhere", measleY, button1Y+buttonSide);
+   measleY = random( button1Y+buttonSide+(measleDiameter/2), (backgroundY+backgroundHeight)-(measleDiameter/2) );
+   }
+   */
   //+buttonSide
   //+buttonSide
   //if () {}
