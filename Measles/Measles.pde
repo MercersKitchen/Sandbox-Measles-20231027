@@ -65,7 +65,12 @@ void setup() {
 } //End setup
 //
 void draw() {
-
+  //Text Code
+  //start="Start", stop="STOP", quit="X"
+  text( start, button1X, button1Y, buttonSide, buttonSide);
+  text( stop, button2X, button2Y, buttonSide, buttonSide);
+  text( quit, button3X, button3Y, buttonSide, buttonSide);
+  //
   ellipse ( leftEyeX, leftEyeY, eyeDimater, eyeDimater ); //Left Eye
   ellipse ( rightEyeX, rightEyeY, eyeDimater, eyeDimater ); //Right Eye
   triangle( noseX1, noseY1, noseX2, noseY2, noseX3, noseY3 ); //Nose
