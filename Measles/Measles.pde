@@ -8,6 +8,7 @@ float mouthX1, mouthY1, mouthX2, mouthY2, mouthOpen, mouthReset;
 float measleX, measleY, measleDiameter;
 float button1X, button1Y, button2X, button2Y, button3X, button3Y, buttonSide;
 color purple=#2C08FF, yellow = #E9FF00, blackInk=#000000, resetColour=#FFFFFF;
+color hoverOverColour=resetColour;
 String start="Start", stop="STOP", quit="X";
 PFont buttonFont;
 //
@@ -62,26 +63,34 @@ void setup() {
   rect( button1X, button1Y, buttonSide, buttonSide );
   rect( button2X, button2Y, buttonSide, buttonSide );
   rect( button3X, button3Y, buttonSide, buttonSide );
-
   //
 } //End setup
 //
 void draw() {
   //Text Code
-  color hoverOverColour=resetColour;
+
+  println(button1X, mouseX, button1X+buttonSide, hoverOverColour);
   if ( mouseX>button1X && mouseX<button1X+buttonSide && mouseY>button1Y && mouseY<button1Y+buttonSide ) { //Buton 1
+    println("here");
     hoverOverColour = yellow;
+    fill( hoverOverColour );
+    rect( button1X, button1Y, buttonSide, buttonSide );
+    fill( resetColour );
   } else if ( mouseX>button2X && mouseX<button2X+buttonSide && mouseY>button2Y && mouseY<button2Y+buttonSide ) { //Button 2
     hoverOverColour = yellow;
+    fill( hoverOverColour );
+    rect( button2X, button2Y, buttonSide, buttonSide );
   } else if ( mouseX>button3X && mouseX<button3X+buttonSide && mouseY>button3Y && mouseY<button3Y+buttonSide ) { //button 3
     hoverOverColour = purple;
+    fill( hoverOverColour );
+    rect( button3X, button3Y, buttonSide, buttonSide );
   } else { //No Buttons
-    fill( resetColour );
+    hoverOverColour = resetColour;
+    fill( hoverOverColour );
+    rect( button1X, button1Y, buttonSide, buttonSide );
+    rect( button2X, button2Y, buttonSide, buttonSide );
+    rect( button3X, button3Y, buttonSide, buttonSide );
   }
-  rect( button1X, button1Y, buttonSide, buttonSide );
-  rect( button2X, button2Y, buttonSide, buttonSide );
-  rect( button3X, button3Y, buttonSide, buttonSide );
-  fill( resetColour );
   //
   fill(blackInk);
   textAlign(CENTER, CENTER); //Align X&Y, see Processing.org / Reference
@@ -104,22 +113,10 @@ void draw() {
   measleDiameter = random( smallerDimension*1/100, smallerDimension*1/30 );
   measleX = random( backgroundX+(measleDiameter/2), (backgroundX+backgroundWidth)-(measleDiameter/2) );
   measleY = random( backgroundY+(measleDiameter/2), (backgroundY+backgroundHeight)-(measleDiameter/2) );
-  println( "Start", measleX, measleY, measleDiameter );
   if ( measleX <= button1X+buttonSide+(measleDiameter/2) && measleY <= button1Y+buttonSide+(measleDiameter/2)) {
-    println("\t\tXhere", measleX, button1X+buttonSide);
     measleX = random( button1X+buttonSide+(measleDiameter/2), (backgroundX+backgroundWidth)-(measleDiameter/2) );
   }
-  /*
-  if ( measleY < button1Y+buttonSide+(measleDiameter/2) ) {
-   println("\t\tYhere", measleY, button1Y+buttonSide);
-   measleY = random( button1Y+buttonSide+(measleDiameter/2), (backgroundY+backgroundHeight)-(measleDiameter/2) );
-   }
-   */
-  //+buttonSide
-  //+buttonSide
-  //if () {}
   noStroke();
-  println( "End", measleX, measleY, measleDiameter );
   ellipse( measleX, measleY, measleDiameter, measleDiameter );
   stroke(1); //default is 1
   fill(resetColour);
