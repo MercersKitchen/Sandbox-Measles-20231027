@@ -129,17 +129,15 @@ void draw() {
 } //End draw
 //
 void keyPressed() {
-  if ( key==' ' ) println("start"); //START, SPACE-Bar
-  if ( key==CODED && keyCode==BACKSPACE ) println("stop"); //STOP
-  if ( key==CODED && keyCode==ESC ) println("quit"); //QUIT
+  if ( key==' ' ) measlesON=true; //START, SPACE-Bar
+  if ( keyCode==BACKSPACE ) measlesON=false; //STOP //Not Needed key==CODED &&
+  if ( keyCode==ESC ) exit(); //QUIT //key==CODED &&
 } //End keyPressed
 //
 void mousePressed() {
-  /*
-  if ( mouseX> mouseX< mouseY> mouseY< ) println("start"); //START
-   if () println("stop"); //STOP
-   if () println("quit"); //QUIT
-   */
+  if ( mouseX>button1X && mouseX<button1X+buttonSide && mouseY>button1Y && mouseY<button1Y+buttonSide ) measlesON=true; //START
+  if ( mouseX>button2X && mouseX<button2X+buttonSide && mouseY>button2Y && mouseY<button2Y+buttonSide ) measlesON=false; //STOP
+  if ( mouseX>button3X && mouseX<button3X+buttonSide && mouseY>button3Y && mouseY<button3Y+buttonSide ) exit(); //QUIT
 } //End mousePressed
 //
 //End MAIN Program
