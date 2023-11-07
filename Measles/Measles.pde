@@ -124,7 +124,7 @@ void draw() {
     measleX = random( button1X+buttonSide+(measleDiameter/2), (backgroundX+backgroundWidth)-(measleDiameter/2) );
   }
   noStroke();
-  if ( measlesON==ture ) ellipse( measleX, measleY, measleDiameter, measleDiameter );
+  if ( measlesON==true ) ellipse( measleX, measleY, measleDiameter, measleDiameter );
   //ERROR: need to redraw program start for measles to disappear
   stroke(1); //default is 1
   fill(resetColour);
