@@ -17,6 +17,7 @@ color purple=#2C08FF, yellow = #E9FF00, blackInk=#000000, resetColour=#FFFFFF;
 color hoverOverColour=resetColour;
 String start="Start", stop="STOP", quit="X";
 PFont buttonFont;
+Boolean measlesON=false;
 //
 void setup() {
   size( 600, 400 ); //fullScreen;
@@ -123,7 +124,7 @@ void draw() {
     measleX = random( button1X+buttonSide+(measleDiameter/2), (backgroundX+backgroundWidth)-(measleDiameter/2) );
   }
   noStroke();
-  ellipse( measleX, measleY, measleDiameter, measleDiameter );
+  if ( measlesON==ture ) ellipse( measleX, measleY, measleDiameter, measleDiameter );
   stroke(1); //default is 1
   fill(resetColour);
 } //End draw
