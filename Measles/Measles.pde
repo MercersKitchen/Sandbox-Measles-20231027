@@ -75,7 +75,8 @@ void setup() {
 void draw() {
   //Text Code
 
-  println(button1X, mouseX, button1X+buttonSide, hoverOverColour);
+  //ERROR Coded, hoverover allows measles into other buttons
+  //Only START has is fixed
   if ( mouseX>button1X && mouseX<button1X+buttonSide && mouseY>button1Y && mouseY<button1Y+buttonSide ) { //Buton 1
     hoverOverColour = yellow;
     fill( hoverOverColour );
@@ -128,15 +129,17 @@ void draw() {
 } //End draw
 //
 void keyPressed() {
-  if ( key==CODED && keyCode==SPACE ) ; //START, SPACE-Bar
-  if () ;
-  if () ;
+  if ( key==' ' ) println("start"); //START, SPACE-Bar
+  if ( key==CODED && keyCode==BACKSPACE ) println("stop"); //STOP
+  if ( key==CODED && keyCode==ESC ) println("quit"); //QUIT
 } //End keyPressed
 //
 void mousePressed() {
-  if ( mouseX> mouseX< mouseY> mouseY< ) ; //START
-  if () ;
-  if () ;
+  /*
+  if ( mouseX> mouseX< mouseY> mouseY< ) println("start"); //START
+   if () println("stop"); //STOP
+   if () println("quit"); //QUIT
+   */
 } //End mousePressed
 //
 //End MAIN Program
