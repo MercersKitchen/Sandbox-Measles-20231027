@@ -125,6 +125,7 @@ void draw() {
   }
   noStroke();
   if ( measlesON==ture ) ellipse( measleX, measleY, measleDiameter, measleDiameter );
+  //ERROR: need to redraw program start for measles to disappear
   stroke(1); //default is 1
   fill(resetColour);
 } //End draw
