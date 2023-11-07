@@ -77,7 +77,6 @@ void draw() {
 
   println(button1X, mouseX, button1X+buttonSide, hoverOverColour);
   if ( mouseX>button1X && mouseX<button1X+buttonSide && mouseY>button1Y && mouseY<button1Y+buttonSide ) { //Buton 1
-    println("here");
     hoverOverColour = yellow;
     fill( hoverOverColour );
     rect( button1X, button1Y, buttonSide, buttonSide );
@@ -129,9 +128,15 @@ void draw() {
 } //End draw
 //
 void keyPressed() {
+  if ( key==CODED && keyCode==SPACE ) ; //START, SPACE-Bar
+  if () ;
+  if () ;
 } //End keyPressed
 //
 void mousePressed() {
+  if ( mouseX> mouseX< mouseY> mouseY< ) ; //START
+  if () ;
+  if () ;
 } //End mousePressed
 //
 //End MAIN Program
