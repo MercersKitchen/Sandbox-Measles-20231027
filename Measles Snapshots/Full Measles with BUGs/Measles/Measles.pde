@@ -124,8 +124,6 @@ void draw() {
   //WHILE will repeat until the randomly chosen variable fits
   while ( measleX <= button1X+buttonSide+(measleDiameter/2) && measleY <= button1Y+buttonSide+(measleDiameter/2)) {
     measleX = random( button1X+buttonSide+(measleDiameter/2), (backgroundX+backgroundWidth)-(measleDiameter/2) );
-    // This only works for one button
-    // How would this change for all buttons
   }
   //WHILE only works for BUTTON1, must be repeated for other buttons
   noStroke();
@@ -141,7 +139,6 @@ void draw() {
 void keyPressed() {
   if ( key==' ' ) measlesON=true; //START, SPACE-Bar
   if ( keyCode==BACKSPACE ) measlesON=false; //STOP //Not Needed key==CODED &&
-  //How does measles "erase" when the button is pressed
   if ( keyCode==ESC ) exit(); //QUIT //key==CODED &&
 } //End keyPressed
 //
