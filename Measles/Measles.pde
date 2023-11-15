@@ -17,7 +17,7 @@ color purple=#2C08FF, yellow = #E9FF00, blackInk=#000000, resetColour=#FFFFFF;
 color hoverOverColour=resetColour;
 String start="Start", stop="STOP", quit="X";
 PFont buttonFont;
-Boolean measlesON=false;
+Boolean measlesON=false, splashScreen=false;
 //
 void setup() {
   size( 600, 400 ); //fullScreen;
