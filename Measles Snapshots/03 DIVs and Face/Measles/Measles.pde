@@ -9,11 +9,6 @@ float noseX1, noseY1, noseX2, noseY2, noseX3, noseY3;
 float mouthX1, mouthY1, mouthX2, mouthY2, mouthOpen, mouthReset;
 float measleX, measleY, measleDiameter;
 float button1X, button1Y, button2X, button2Y, button3X, button3Y, buttonSide;
-color purple=#2C08FF, yellow = #E9FF00, blackInk=#000000, resetColour=#FFFFFF;
-color hoverOverColour=resetColour;
-String start="Start", stop="STOP", quit="X";
-PFont buttonFont;
-Boolean measlesON=false;
 //
 void setup() {
   //Display
@@ -49,7 +44,6 @@ void setup() {
   mouthY2 = mouthY1;
   mouthOpen = smallerDimension*1/4;
   mouthReset = smallerDimension/smallerDimension; //1=reset
-  buttonFont = createFont("Harrington", 55);
   //
   //DIVs
   rect( backgroundX, backgroundY, backgroundWidth, backgroundHeight ); //Circle ONLY
