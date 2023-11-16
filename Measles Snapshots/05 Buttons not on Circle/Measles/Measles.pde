@@ -120,21 +120,7 @@ void draw() {
   measleDiameter = random( smallerDimension*1/100, smallerDimension*1/30 );
   measleX = random( backgroundX+(measleDiameter/2), (backgroundX+backgroundWidth)-(measleDiameter/2) );
   measleY = random( backgroundY+(measleDiameter/2), (backgroundY+backgroundHeight)-(measleDiameter/2) );
-  //IF runs once, but computer can randomly choose a measlesX that is error
-  //WHILE will repeat until the randomly chosen variable fits
-  while ( measleX <= button1X+buttonSide+(measleDiameter/2) && measleY <= button1Y+buttonSide+(measleDiameter/2)) {
-    measleX = random( button1X+buttonSide+(measleDiameter/2), (backgroundX+backgroundWidth)-(measleDiameter/2) );
-    // This only works for one button
-    // How would this change for all buttons
-  }
-  //WHILE only works for BUTTON1, must be repeated for other buttons
-  noStroke();
-  if ( ((measleX-faceX)*(measleX-faceX))+((measleY-faceY)*(measleY-faceY)) < sq( ((faceDiameter/2)-(measleDiameter/2)) ) ) { //Measle on Circle
-    if ( measlesON==true ) ellipse( measleX, measleY, measleDiameter, measleDiameter );
-    //ERROR: need to redraw program start for measles to disappear
-  } // End Measle on Circle
-
-  stroke(1); //default is 1
+  ellipse( measleX, measleY, measleDiameter, measleDiameter );
   fill(resetColour);
 } //End draw
 //

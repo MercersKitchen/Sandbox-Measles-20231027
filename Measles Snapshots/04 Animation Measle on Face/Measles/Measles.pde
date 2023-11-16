@@ -10,10 +10,6 @@ float mouthX1, mouthY1, mouthX2, mouthY2, mouthOpen, mouthReset;
 float measleX, measleY, measleDiameter;
 float button1X, button1Y, button2X, button2Y, button3X, button3Y, buttonSide;
 color purple=#2C08FF, yellow = #E9FF00, blackInk=#000000, resetColour=#FFFFFF;
-//color hoverOverColour=resetColour;
-//String start="Start", stop="STOP", quit="X";
-//PFont buttonFont;
-//Boolean measlesON=false;
 //
 void setup() {
   //Display
